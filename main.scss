@@ -1,6 +1,36 @@
 ﻿$main-color: #579c87;
 $font-color: #fdcb46;
+
 $font: Arial, sans serif;
+$font-note-enchantee: 'Devonshire', cursive;;
+$font-chic-fancaise: 'Croissant One', cursive;
+$font-delice-papilles: Bahnschrift;
+$font-palette-gout: 'Kaushan Script', cursive;
+
+$menu-color-note-enchantee: #fcdfdb;
+$menu-color-chic-fancaise: #fff5fe;
+$menu-color-delice-papilles: #f9f9f9;
+$menu-color-palette-gout: #fdfffd;
+
+@keyframes shake {
+    0% { transform: translate(1px, 0px); }
+    10% { transform: translate(-1px, 0px); }
+    20% { transform: translate(-3px, 0px); }
+    30% { transform: translate(3px, 0px); }
+    40% { transform: translate(1px, 0px); }
+    50% { transform: translate(-1px, 0px); }
+    60% { transform: translate(-3px, 0px); }
+    70% { transform: translate(3px, 0px); }
+    80% { transform: translate(-1px, 0px); }
+    90% { transform: translate(1px, 0px); }
+    100% { transform: translate(1px, 0px); }
+}
+
+@keyframes ellipsis {
+    to {
+        width: 1.25em;
+    }
+}
 
 body {
     margin: 0;
@@ -37,6 +67,10 @@ a {
         display: flex;
         justify-content: space-between;
         align-content: center;
+        width: 750px;
+    }
+
+    &--footer-pos {
         position: fixed;
         height: 50px;
         bottom: 0;
@@ -45,12 +79,11 @@ a {
 
 .footer-links {
     font-size: 1.1em;
-    width: 200px;
+    width: 170px;
     height: 50px;
 
-
-    &--end {
-
+    &:hover {
+        animation: shake 300ms;
     }
 }
 
@@ -63,15 +96,79 @@ a {
     margin: 30px 0px;
 }
 
+@mixin h2-gradient ($grad-start, $grad-end) {
+    h2 {
+        background: linear-gradient(to right, $grad-start 0%, $grad-end 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+@mixin p-layout ($color) {
+    p {
+        margin: 0;
+        font-size: 300%;
+        color: $color;
+    }
+}
+
 .menu {
     width: 300px;
+    height: 424px;
+    flex-direction: column;
 
     &:hover {
         transition: 300ms;
         opacity: 0.4;
         transform: scale(1.10);
     }
+
+    &__note-enchantee {
+        background-color: $menu-color-note-enchantee;
+        font-family: $font-note-enchantee;
+        @include h2-gradient(#3d1319, #3d1319);
+        @include p-layout(#3d1319);
+    }
+
+    &__chic-fancaise {
+        background-color: $menu-color-chic-fancaise;
+        font-family: $font-chic-fancaise;
+        @include h2-gradient(#eba54e, #915dfe);
+        @include p-layout(#c77412);
+
+        p {
+            font-family: 'Old Standard TT', serif;
+            font-weight: 300;
+        }
+    }
+
+    &__delice-papilles {
+        background-color: $menu-color-delice-papilles;
+        font-family: $font-delice-papilles;
+        @include h2-gradient(#0022db, #08d9fb);
+        @include p-layout(#0887fb);
+    }
+
+    &__palette-gout {
+        background-color: $menu-color-palette-gout;
+        font-family: $font-palette-gout;
+        @include h2-gradient(#41963c, #beff7f);
+        @include p-layout(#72bf56);
+    }
+
+    &--box {
+        color: black;
+        flex-direction: column;
+    }
+
+    &--main {
+        flex-direction: column;
+        background-color: $menu-color-note-enchantee;
+        max-width: 750px;
+        width: 750px;
+    }
 }
+
 
 .mask {
     box-shadow: 0px 0px 12px #BBBBBB;
@@ -87,6 +184,29 @@ a {
     font-size: 1.6em;
     height: 50px;
     width: 300px;
+
+    &__text:after {
+        position: absolute;
+        overflow: hidden;
+        display: inline-block;
+        vertical-align: bottom;
+        animation: ellipsis steps(4,end) 2800ms infinite;
+        content: "\2026";
+        width: 0px;
+    }
+}
+
+#note {
+    width: 20%;
+}
+
+#logo {
+    max-width: 240px;
+}
+
+#legal {
+    color: black;
+    text-align: justify;
 }
 
 @media (max-width: 380px) {
@@ -104,6 +224,5 @@ a {
 
     .banner--footer {
         justify-content: center;
-        height: 100px;
     }
 }

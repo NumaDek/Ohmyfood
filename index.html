@@ -5,26 +5,61 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Devonshire&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Croissant+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@700&display=swap" rel="stylesheet">
     <title>ohmyfood</title>
 </head>
 <body>
     <header class="row banner center">
-        <h1 class="logo">ohmyfood</h1>
+        <a href="index.html"><img src="img/logo.png" alt="Ohmyfood logo" id="logo" /></a>
     </header>
     <div class="row center">
         <div class="mosaique center center__wrap">
-            <figure class="mask"><img src="Menus/menu-1b.png" class="menu" alt="Menu de la note enchanté" /></figure>
-            <figure class="mask"><img src="Menus/menu-2b.png" class="menu" alt="Menu de Le chic à la française" /></figure>
-            <figure class="mask"><img src="Menus/menu-3b.png" class="menu" alt="Menu de Le délice des papilles" /></figure>
-            <figure class="mask"><img src="Menus/menu-4b.png" class="menu" alt="Menu de La pallette du goût" /></figure>
+            <div class="mask">
+                <a href="la_note_enchantee.html">
+                    <article class="menu menu__note-enchantee center">
+                        <img src="img/note.png" alt="Note de musique, La note enchantée" id="note" />
+                        <h2>La note enchantée</h2>
+                        <p>Menu</p>
+                    </article>
+                </a>
+            </div>
+            <div class="mask">
+                <a href="le_chic_a_la_francaise.html">
+                    <article class="menu menu__chic-fancaise center">
+                        <h2>Le chic à la française</h2>
+                        <p>Menu</p>
+                    </article>
+                </a>
+            </div>
+            <div class="mask">
+                <a href="le_delice_des_papilles.html">
+                    <article class="menu menu__delice-papilles center">
+                        <h2>Le délice des papilles</h2>
+                        <p>Menu</p>
+                    </article>
+                </a>
+            </div>
+            <div class="mask">
+                <a href="la_palette_du_gout.html">
+                    <article class="menu menu__palette-gout center">
+                        <h2>La palette du goût</h2>
+                        <p>Menu</p>
+                    </article>
+                </a>
+            </div>
         </div>
     </div>
     <div class="row center">
-        <a href="#"><div class="soon center"><p>Prochainement</p></div></a>
+        <a href="#"><div class="soon center"><p class="soon__text">Prochainement</p></div></a>
     </div>
-    <footer class="row banner banner--footer">
-        <a href="#"><div class="footer-links center"><p>Mentions légales</p></div></a>
-        <a href="mailto:numadek@gmail.com"><div class="footer-links center"><p>Contactez-nous</p></div></a>
+    <footer class="row banner banner--footer-pos center">
+        <div class="banner--footer">
+            <a href="mentions_legales.html"><div class="footer-links center"><p>Mentions légales</p></div></a>
+            <a href="mailto:numadek@gmail.com"><div class="footer-links center"><p>Contactez-nous</p></div></a>
+        </div>
     </footer>
 </body>
 </html>

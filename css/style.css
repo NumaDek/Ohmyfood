@@ -1,3 +1,44 @@
+@charset "UTF-8";
+@keyframes shake {
+  0% {
+    transform: translate(1px, 0px);
+  }
+  10% {
+    transform: translate(-1px, 0px);
+  }
+  20% {
+    transform: translate(-3px, 0px);
+  }
+  30% {
+    transform: translate(3px, 0px);
+  }
+  40% {
+    transform: translate(1px, 0px);
+  }
+  50% {
+    transform: translate(-1px, 0px);
+  }
+  60% {
+    transform: translate(-3px, 0px);
+  }
+  70% {
+    transform: translate(3px, 0px);
+  }
+  80% {
+    transform: translate(-1px, 0px);
+  }
+  90% {
+    transform: translate(1px, 0px);
+  }
+  100% {
+    transform: translate(1px, 0px);
+  }
+}
+@keyframes ellipsis {
+  to {
+    width: 1.25em;
+  }
+}
 body {
   margin: 0;
   display: flex;
@@ -32,6 +73,9 @@ a {
   display: flex;
   justify-content: space-between;
   align-content: center;
+  width: 750px;
+}
+.banner--footer-pos {
   position: fixed;
   height: 50px;
   bottom: 0;
@@ -39,9 +83,13 @@ a {
 
 .footer-links {
   font-size: 1.1em;
-  width: 200px;
+  width: 170px;
   height: 50px;
 }
+.footer-links:hover {
+  animation: shake 300ms;
+}
+
 .logo {
   font-size: 2.7em;
 }
@@ -53,11 +101,83 @@ a {
 
 .menu {
   width: 300px;
+  height: 424px;
+  flex-direction: column;
 }
 .menu:hover {
   transition: 300ms;
   opacity: 0.4;
   transform: scale(1.1);
+}
+.menu__note-enchantee {
+  background-color: #fcdfdb;
+  font-family: "Devonshire", cursive;
+}
+.menu__note-enchantee h2 {
+  background: linear-gradient(to right, #3d1319 0%, #3d1319 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.menu__note-enchantee p {
+  margin: 0;
+  font-size: 300%;
+  color: #3d1319;
+}
+.menu__chic-fancaise {
+  background-color: #fff5fe;
+  font-family: "Croissant One", cursive;
+}
+.menu__chic-fancaise h2 {
+  background: linear-gradient(to right, #eba54e 0%, #915dfe 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.menu__chic-fancaise p {
+  margin: 0;
+  font-size: 300%;
+  color: #c77412;
+}
+.menu__chic-fancaise p {
+  font-family: "Old Standard TT", serif;
+  font-weight: 300;
+}
+.menu__delice-papilles {
+  background-color: #f9f9f9;
+  font-family: Bahnschrift;
+}
+.menu__delice-papilles h2 {
+  background: linear-gradient(to right, #0022db 0%, #08d9fb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.menu__delice-papilles p {
+  margin: 0;
+  font-size: 300%;
+  color: #0887fb;
+}
+.menu__palette-gout {
+  background-color: #fdfffd;
+  font-family: "Kaushan Script", cursive;
+}
+.menu__palette-gout h2 {
+  background: linear-gradient(to right, #41963c 0%, #beff7f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.menu__palette-gout p {
+  margin: 0;
+  font-size: 300%;
+  color: #72bf56;
+}
+.menu--box {
+  color: black;
+  flex-direction: column;
+}
+.menu--main {
+  flex-direction: column;
+  background-color: #fcdfdb;
+  max-width: 750px;
+  width: 750px;
 }
 
 .mask {
@@ -75,6 +195,28 @@ a {
   height: 50px;
   width: 300px;
 }
+.soon__text:after {
+  position: absolute;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  animation: ellipsis steps(4, end) 2800ms infinite;
+  content: "…";
+  width: 0px;
+}
+
+#note {
+  width: 20%;
+}
+
+#logo {
+  max-width: 240px;
+}
+
+#legal {
+  color: black;
+  text-align: justify;
+}
 
 @media (max-width: 380px) {
   body {
@@ -91,7 +233,6 @@ a {
 
   .banner--footer {
     justify-content: center;
-    height: 100px;
   }
 }
 
