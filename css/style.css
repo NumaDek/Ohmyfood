@@ -1,4 +1,11 @@
 @charset "UTF-8";
+@font-face {
+  font-family: "Rusulica Script W00 Regular";
+  src: url("fonts/d8058ebda252971c44e0a5ea55496931.eot");
+  /* IE9*/
+  src: url("fonts/d8058ebda252971c44e0a5ea55496931.eot?#iefix") format("embedded-opentype"), url("fonts/d8058ebda252971c44e0a5ea55496931.woff2") format("woff2"), url("fonts/d8058ebda252971c44e0a5ea55496931.woff") format("woff"), url("fonts/d8058ebda252971c44e0a5ea55496931.ttf") format("truetype"), url("fonts/d8058ebda252971c44e0a5ea55496931.svg#Rusulica Script W00 Regular") format("svg");
+  /* iOS 4.1- */
+}
 @keyframes shake {
   0% {
     transform: translate(1px, 0px);
@@ -143,7 +150,7 @@ a {
 }
 .menu__delice-papilles {
   background-color: #f9f9f9;
-  font-family: Bahnschrift;
+  font-family: "Rusulica Script W00 Regular";
 }
 .menu__delice-papilles h2 {
   background: linear-gradient(to right, #0022db 0%, #08d9fb 100%);
