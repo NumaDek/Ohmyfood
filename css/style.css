@@ -164,7 +164,7 @@ a {
 .menu__chic-fancaise p {
   font-family: "Old Standard TT", serif;
   font-size: 2em;
-  font-weight: bold;
+  font-weight: normal;
 }
 .menu__delice-papilles {
   background-color: #f9f9f9;
@@ -215,10 +215,23 @@ a {
   flex-direction: column;
 }
 .menu--main {
+  font-family: "Devonshire", cursive;
+  box-shadow: 0px 0px 12px #BBBBBB;
   flex-direction: column;
   background-color: #fcdfdb;
   max-width: 750px;
-  width: 750px;
+  min-width: 10px;
+  padding: 50px;
+}
+.menu--main__head-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.menu--main__head-box img {
+  width: 35%;
 }
 
 .mask {

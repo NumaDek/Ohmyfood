@@ -18,23 +18,46 @@
     src: url("fonts/segoe-print/segoeprb.ttf");
 }
 
+// Banners & fonts default colors.
 $main-color: #579c87;
 $font-color: #fdcb46;
-
+// Default font.
 $font: Arial, sans serif;
+// Main menu fonts.
 $font-note: 'Devonshire', cursive;
 $font-chic: 'Croissant One', cursive;
 $font-delice: 'Rusulica Script W00 Regular';
 $font-palette: 'Kaushan Script', cursive;
-
+// Auxiliary menu fonts.
 $font-p-note-b: 'segoe-print-b', Comic Sans MS;
 $font-p-chic: 'Old Standard TT', serif;
 $font-p-note: 'segoe-print', Comic Sans MS;
+// Start color of the gradients in menu titles.
+$font-c-grad-start-note: #3d1319;
+$font-c-grad-start-chic: #eba54e;
+$font-c-grad-start-delice: #0022db;
+$font-c-grad-start-palette: #41963c;
+// End color of the gradients in menu titles.
+$font-c-grad-end-note: #3d1319;
+$font-c-grad-end-chic: #915dfe;
+$font-c-grad-end-delice: #08d9fb;
+$font-c-grad-end-palette: #beff7f;
+// Colors of the auxiliary menu titles.
+$font-c-aux-note: #3d1319;
+$font-c-aux-chic: #c77412;
+$font-c-aux-delice: #0887fb;
+$font-c-aux-palette: #72bf56;
+// Font sizes of the main menu titles.
+$font-size-note: 1.7em;
+$font-size-chic: 1.3em;
+$font-size-delice: 1.4em;
+$font-size-palette: 1.5em;
+// Colors of the menu tile backgrounds.
+$menu-bg-color-note: #fcdfdb;
+$menu-bg-color-chic: #fff5fe;
+$menu-bg-color-delice: #f9f9f9;
+$menu-bg-color-palette: #fdfffd;
 
-$menu-color-note: #fcdfdb;
-$menu-color-chic: #fff5fe;
-$menu-color-delice: #f9f9f9;
-$menu-color-palette: #fdfffd;
 
 @keyframes shake {
     0% { transform: translate(1px, 0px); }
@@ -54,6 +77,45 @@ $menu-color-palette: #fdfffd;
     to {
         width: 1.25em;
     }
+}
+
+@mixin h2-gradient ($grad-start, $grad-end) {
+    h2 {
+        background: linear-gradient(to right, $grad-start 0%, $grad-end 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+@mixin p-layout ($color) {
+    p {
+        margin: 0;
+        color: $color;
+    }
+}
+
+@mixin h2-font ($font, $size, $weight: normal) {
+    h2 {
+        font-family: $font;
+        font-size: $size;
+        font-weight: $weight;
+    }
+}
+
+@mixin p-font ($font, $size, $weight: normal) {
+    p {
+        font-family: $font;
+        font-size: $size;
+        font-weight: $weight;
+    }
+}
+
+@mixin menu-conf ($bg-color, $main-font, $main-font-size, $grad-start, $grad-end, $aux-color, $aux-font, $aux-size, $main-font-weight: normal, $aux-font-weight: normal) {
+    background-color: $bg-color;
+    @include h2-font ($main-font, $main-font-size, $main-font-weight);
+    @include h2-gradient($grad-start, $grad-end);
+    @include p-layout($aux-color);
+    @include p-font($aux-font, $aux-size, $aux-font-weight);
 }
 
 body {
@@ -120,45 +182,6 @@ a {
     margin: 30px 0px;
 }
 
-@mixin h2-gradient ($grad-start, $grad-end) {
-    h2 {
-        background: linear-gradient(to right, $grad-start 0%, $grad-end 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-}
-
-@mixin p-layout ($color) {
-    p {
-        margin: 0;
-        color: $color;
-    }
-}
-
-@mixin h2-font ($font, $size, $weight : normal) {
-    h2 {
-        font-family: $font;
-        font-size: $size;
-        font-weight: $weight;
-    }
-}
-
-@mixin p-font ($font, $size, $weight: normal) {
-    p {
-        font-family: $font;
-        font-size: $size;
-        font-weight: $weight;
-    }
-}
-
-@mixin menu-conf ($back-color, $main-font, $main-font-size, $grad-start, $grad-end, $aux-color, $aux-font, $aux-size, $main-font-weight : normal, $aux-font-weight : normal) {
-    background-color: $back-color;
-    @include h2-font ($main-font, $main-font-size, $main-font-weight);
-    @include h2-gradient($grad-start, $grad-end);
-    @include p-layout($aux-color);
-    @include p-font($aux-font, $aux-size, $aux-font-weight);
-}
-
 .menu {
     width: 300px;
     height: 424px;
@@ -171,19 +194,19 @@ a {
     }
 
     &__note-enchantee {
-        @include menu-conf ($menu-color-note, $font-note, 1.7em, #3d1319, #3d1319, #3d1319, $font-p-note-b, 1.7em);
+        @include menu-conf ($menu-bg-color-note, $font-note, $font-size-note, $font-c-grad-start-note, $font-c-grad-end-note, $font-c-aux-note, $font-p-note-b, 1.7em);
     }
 
     &__chic-fancaise {
-        @include menu-conf ($menu-color-chic, $font-chic, 1.3em, #eba54e, #915dfe, #c77412, $font-p-chic, 2.0em, normal, bold);
+        @include menu-conf ($menu-bg-color-chic, $font-chic, $font-size-chic, $font-c-grad-start-chic, $font-c-grad-end-chic, $font-c-aux-chic, $font-p-chic, 2.0em);
     }
 
     &__delice-papilles {
-        @include menu-conf ($menu-color-delice, $font-delice, 1.4em, #0022db, #08d9fb, #0887fb, $font-p-note, 1.7em, bold);
+        @include menu-conf ($menu-bg-color-delice, $font-delice, $font-size-delice, $font-c-grad-start-delice, $font-c-grad-end-delice, $font-c-aux-delice, $font-p-note, 1.7em, bold);
     }
 
     &__palette-gout {
-        @include menu-conf ($menu-color-palette, $font-palette, 1.5em, #41963c, #beff7f, #72bf56, $font-p-note, 1.7em);
+        @include menu-conf ($menu-bg-color-palette, $font-palette, $font-size-palette, $font-c-grad-start-palette, $font-c-grad-end-palette, $font-c-aux-palette, $font-p-note, 1.7em);
     }
 
     &--box {
@@ -192,13 +215,30 @@ a {
     }
 
     &--main {
+        font-family: $font-note;
+        box-shadow: 0px 0px 12px #BBBBBB;
         flex-direction: column;
-        background-color: $menu-color-note;
+        background-color: $menu-bg-color-note;
         max-width: 750px;
-        width: 750px;
+        min-width: 10px;
+        padding: 50px;
+
+        &__head-box {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            h3 {
+
+            }
+
+            img {
+                width: 35%;
+            }
+        }
     }
 }
-
 
 .mask {
     box-shadow: 0px 0px 12px #BBBBBB;
@@ -224,6 +264,10 @@ a {
         content: "\2026";
         width: 0px;
     }
+}
+
+#menu-note {
+
 }
 
 #note {
