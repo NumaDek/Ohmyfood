@@ -1,26 +1,40 @@
 ﻿@font-face {
     font-family: "Rusulica Script W00 Regular";
-    src: url("fonts/d8058ebda252971c44e0a5ea55496931.eot"); /* IE9*/
-    src: url("fonts/d8058ebda252971c44e0a5ea55496931.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-    url("fonts/d8058ebda252971c44e0a5ea55496931.woff2") format("woff2"), /* chrome、firefox */
-    url("fonts/d8058ebda252971c44e0a5ea55496931.woff") format("woff"), /* chrome、firefox */
-    url("fonts/d8058ebda252971c44e0a5ea55496931.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-    url("fonts/d8058ebda252971c44e0a5ea55496931.svg#Rusulica Script W00 Regular") format("svg"); /* iOS 4.1- */
+    src: url("fonts/rusulica/d8058ebda252971c44e0a5ea55496931.eot");
+    src: url("fonts/rusulica/d8058ebda252971c44e0a5ea55496931.eot?#iefix") format("embedded-opentype"),
+    url("fonts/rusulica/d8058ebda252971c44e0a5ea55496931.woff2") format("woff2"),
+    url("fonts/rusulica/d8058ebda252971c44e0a5ea55496931.woff") format("woff"),
+    url("fonts/rusulica/d8058ebda252971c44e0a5ea55496931.ttf") format("truetype"),
+    url("fonts/rusulica/d8058ebda252971c44e0a5ea55496931.svg#Rusulica Script W00 Regular") format("svg");
+}
+
+@font-face {
+    font-family: "segoe-print";
+    src: url("fonts/segoe-print/segoepr.ttf");
+}
+
+@font-face {
+    font-family: "segoe-print-b";
+    src: url("fonts/segoe-print/segoeprb.ttf");
 }
 
 $main-color: #579c87;
 $font-color: #fdcb46;
 
 $font: Arial, sans serif;
-$font-note-enchantee: 'Devonshire', cursive;
-$font-chic-fancaise: 'Croissant One', cursive;
-$font-delice-papilles: 'Rusulica Script W00 Regular';
-$font-palette-gout: 'Kaushan Script', cursive;
+$font-note: 'Devonshire', cursive;
+$font-chic: 'Croissant One', cursive;
+$font-delice: 'Rusulica Script W00 Regular';
+$font-palette: 'Kaushan Script', cursive;
 
-$menu-color-note-enchantee: #fcdfdb;
-$menu-color-chic-fancaise: #fff5fe;
-$menu-color-delice-papilles: #f9f9f9;
-$menu-color-palette-gout: #fdfffd;
+$font-p-note-b: 'segoe-print-b', Comic Sans MS;
+$font-p-chic: 'Old Standard TT', serif;
+$font-p-note: 'segoe-print', Comic Sans MS;
+
+$menu-color-note: #fcdfdb;
+$menu-color-chic: #fff5fe;
+$menu-color-delice: #f9f9f9;
+$menu-color-palette: #fdfffd;
 
 @keyframes shake {
     0% { transform: translate(1px, 0px); }
@@ -117,9 +131,32 @@ a {
 @mixin p-layout ($color) {
     p {
         margin: 0;
-        font-size: 300%;
         color: $color;
     }
+}
+
+@mixin h2-font ($font, $size, $weight : normal) {
+    h2 {
+        font-family: $font;
+        font-size: $size;
+        font-weight: $weight;
+    }
+}
+
+@mixin p-font ($font, $size, $weight: normal) {
+    p {
+        font-family: $font;
+        font-size: $size;
+        font-weight: $weight;
+    }
+}
+
+@mixin menu-conf ($back-color, $main-font, $main-font-size, $grad-start, $grad-end, $aux-color, $aux-font, $aux-size, $main-font-weight : normal, $aux-font-weight : normal) {
+    background-color: $back-color;
+    @include h2-font ($main-font, $main-font-size, $main-font-weight);
+    @include h2-gradient($grad-start, $grad-end);
+    @include p-layout($aux-color);
+    @include p-font($aux-font, $aux-size, $aux-font-weight);
 }
 
 .menu {
@@ -134,36 +171,19 @@ a {
     }
 
     &__note-enchantee {
-        background-color: $menu-color-note-enchantee;
-        font-family: $font-note-enchantee;
-        @include h2-gradient(#3d1319, #3d1319);
-        @include p-layout(#3d1319);
+        @include menu-conf ($menu-color-note, $font-note, 1.7em, #3d1319, #3d1319, #3d1319, $font-p-note-b, 1.7em);
     }
 
     &__chic-fancaise {
-        background-color: $menu-color-chic-fancaise;
-        font-family: $font-chic-fancaise;
-        @include h2-gradient(#eba54e, #915dfe);
-        @include p-layout(#c77412);
-
-        p {
-            font-family: 'Old Standard TT', serif;
-            font-weight: 300;
-        }
+        @include menu-conf ($menu-color-chic, $font-chic, 1.3em, #eba54e, #915dfe, #c77412, $font-p-chic, 2.0em, normal, bold);
     }
 
     &__delice-papilles {
-        background-color: $menu-color-delice-papilles;
-        font-family: $font-delice-papilles;
-        @include h2-gradient(#0022db, #08d9fb);
-        @include p-layout(#0887fb);
+        @include menu-conf ($menu-color-delice, $font-delice, 1.4em, #0022db, #08d9fb, #0887fb, $font-p-note, 1.7em, bold);
     }
 
     &__palette-gout {
-        background-color: $menu-color-palette-gout;
-        font-family: $font-palette-gout;
-        @include h2-gradient(#41963c, #beff7f);
-        @include p-layout(#72bf56);
+        @include menu-conf ($menu-color-palette, $font-palette, 1.5em, #41963c, #beff7f, #72bf56, $font-p-note, 1.7em);
     }
 
     &--box {
@@ -173,7 +193,7 @@ a {
 
     &--main {
         flex-direction: column;
-        background-color: $menu-color-note-enchantee;
+        background-color: $menu-color-note;
         max-width: 750px;
         width: 750px;
     }

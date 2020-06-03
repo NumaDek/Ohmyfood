@@ -1,10 +1,16 @@
 @charset "UTF-8";
 @font-face {
   font-family: "Rusulica Script W00 Regular";
-  src: url("fonts/d8058ebda252971c44e0a5ea55496931.eot");
-  /* IE9*/
-  src: url("fonts/d8058ebda252971c44e0a5ea55496931.eot?#iefix") format("embedded-opentype"), url("fonts/d8058ebda252971c44e0a5ea55496931.woff2") format("woff2"), url("fonts/d8058ebda252971c44e0a5ea55496931.woff") format("woff"), url("fonts/d8058ebda252971c44e0a5ea55496931.ttf") format("truetype"), url("fonts/d8058ebda252971c44e0a5ea55496931.svg#Rusulica Script W00 Regular") format("svg");
-  /* iOS 4.1- */
+  src: url("fonts/rusulica/d8058ebda252971c44e0a5ea55496931.eot");
+  src: url("fonts/rusulica/d8058ebda252971c44e0a5ea55496931.eot?#iefix") format("embedded-opentype"), url("fonts/rusulica/d8058ebda252971c44e0a5ea55496931.woff2") format("woff2"), url("fonts/rusulica/d8058ebda252971c44e0a5ea55496931.woff") format("woff"), url("fonts/rusulica/d8058ebda252971c44e0a5ea55496931.ttf") format("truetype"), url("fonts/rusulica/d8058ebda252971c44e0a5ea55496931.svg#Rusulica Script W00 Regular") format("svg");
+}
+@font-face {
+  font-family: "segoe-print";
+  src: url("fonts/segoe-print/segoepr.ttf");
+}
+@font-face {
+  font-family: "segoe-print-b";
+  src: url("fonts/segoe-print/segoeprb.ttf");
 }
 @keyframes shake {
   0% {
@@ -118,7 +124,11 @@ a {
 }
 .menu__note-enchantee {
   background-color: #fcdfdb;
+}
+.menu__note-enchantee h2 {
   font-family: "Devonshire", cursive;
+  font-size: 1.7em;
+  font-weight: normal;
 }
 .menu__note-enchantee h2 {
   background: linear-gradient(to right, #3d1319 0%, #3d1319 100%);
@@ -127,12 +137,20 @@ a {
 }
 .menu__note-enchantee p {
   margin: 0;
-  font-size: 300%;
   color: #3d1319;
+}
+.menu__note-enchantee p {
+  font-family: "segoe-print-b", Comic Sans MS;
+  font-size: 1.7em;
+  font-weight: normal;
 }
 .menu__chic-fancaise {
   background-color: #fff5fe;
+}
+.menu__chic-fancaise h2 {
   font-family: "Croissant One", cursive;
+  font-size: 1.3em;
+  font-weight: normal;
 }
 .menu__chic-fancaise h2 {
   background: linear-gradient(to right, #eba54e 0%, #915dfe 100%);
@@ -141,16 +159,20 @@ a {
 }
 .menu__chic-fancaise p {
   margin: 0;
-  font-size: 300%;
   color: #c77412;
 }
 .menu__chic-fancaise p {
   font-family: "Old Standard TT", serif;
-  font-weight: 300;
+  font-size: 2em;
+  font-weight: bold;
 }
 .menu__delice-papilles {
   background-color: #f9f9f9;
+}
+.menu__delice-papilles h2 {
   font-family: "Rusulica Script W00 Regular";
+  font-size: 1.4em;
+  font-weight: bold;
 }
 .menu__delice-papilles h2 {
   background: linear-gradient(to right, #0022db 0%, #08d9fb 100%);
@@ -159,12 +181,20 @@ a {
 }
 .menu__delice-papilles p {
   margin: 0;
-  font-size: 300%;
   color: #0887fb;
+}
+.menu__delice-papilles p {
+  font-family: "segoe-print", Comic Sans MS;
+  font-size: 1.7em;
+  font-weight: normal;
 }
 .menu__palette-gout {
   background-color: #fdfffd;
+}
+.menu__palette-gout h2 {
   font-family: "Kaushan Script", cursive;
+  font-size: 1.5em;
+  font-weight: normal;
 }
 .menu__palette-gout h2 {
   background: linear-gradient(to right, #41963c 0%, #beff7f 100%);
@@ -173,8 +203,12 @@ a {
 }
 .menu__palette-gout p {
   margin: 0;
-  font-size: 300%;
   color: #72bf56;
+}
+.menu__palette-gout p {
+  font-family: "segoe-print", Comic Sans MS;
+  font-size: 1.7em;
+  font-weight: normal;
 }
 .menu--box {
   color: black;
