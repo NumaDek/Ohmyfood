@@ -125,12 +125,12 @@ a {
 .menu__note-enchantee {
   background-color: #fcdfdb;
 }
-.menu__note-enchantee h2 {
+.menu__note-enchantee h2, .menu__note-enchantee h3 {
   font-family: "Devonshire", cursive;
   font-size: 1.7em;
   font-weight: normal;
 }
-.menu__note-enchantee h2 {
+.menu__note-enchantee h2, .menu__note-enchantee h3 {
   background: linear-gradient(to right, #3d1319 0%, #3d1319 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -147,12 +147,12 @@ a {
 .menu__chic-fancaise {
   background-color: #fff5fe;
 }
-.menu__chic-fancaise h2 {
+.menu__chic-fancaise h2, .menu__chic-fancaise h3 {
   font-family: "Croissant One", cursive;
   font-size: 1.3em;
   font-weight: normal;
 }
-.menu__chic-fancaise h2 {
+.menu__chic-fancaise h2, .menu__chic-fancaise h3 {
   background: linear-gradient(to right, #eba54e 0%, #915dfe 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -169,12 +169,12 @@ a {
 .menu__delice-papilles {
   background-color: #f9f9f9;
 }
-.menu__delice-papilles h2 {
-  font-family: "Rusulica Script W00 Regular";
+.menu__delice-papilles h2, .menu__delice-papilles h3 {
+  font-family: "Rusulica Script W00 Regular", cursive;
   font-size: 1.4em;
   font-weight: bold;
 }
-.menu__delice-papilles h2 {
+.menu__delice-papilles h2, .menu__delice-papilles h3 {
   background: linear-gradient(to right, #0022db 0%, #08d9fb 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -191,12 +191,12 @@ a {
 .menu__palette-gout {
   background-color: #fdfffd;
 }
-.menu__palette-gout h2 {
+.menu__palette-gout h2, .menu__palette-gout h3 {
   font-family: "Kaushan Script", cursive;
   font-size: 1.5em;
   font-weight: normal;
 }
-.menu__palette-gout h2 {
+.menu__palette-gout h2, .menu__palette-gout h3 {
   background: linear-gradient(to right, #41963c 0%, #beff7f 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -210,28 +210,81 @@ a {
   font-size: 1.7em;
   font-weight: normal;
 }
-.menu--box {
+.menu__box {
   color: black;
   flex-direction: column;
 }
-.menu--main {
-  font-family: "Devonshire", cursive;
+.menu__main {
+  background-color: #fcdfdb;
   box-shadow: 0px 0px 12px #BBBBBB;
   flex-direction: column;
   background-color: #fcdfdb;
   max-width: 750px;
-  min-width: 10px;
+  min-width: 90%;
   padding: 50px;
 }
-.menu--main__head-box {
+.menu__main h2, .menu__main h3 {
+  font-family: "Devonshire", cursive;
+  font-size: 2.5em;
+  font-weight: normal;
+}
+.menu__main h2, .menu__main h3 {
+  background: linear-gradient(to right, #3d1319 0%, #3d1319 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.menu__main p {
+  margin: 0;
+  color: #3d1319;
+}
+.menu__main p {
+  font-family: "segoe-print-b", Comic Sans MS;
+  font-size: 1em;
+  font-weight: normal;
+}
+.menu__main h3 {
+  font-family: "segoe-print", Comic Sans MS;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.menu__main h3:hover {
+  /* ! Animer ! */
+  text-decoration: underline;
+}
+.menu__head-box {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   width: 100%;
 }
-.menu--main__head-box img {
+.menu__head-box img {
   width: 35%;
+}
+.menu__price {
+  font-weight: bold;
+}
+.menu__content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.menu__content p {
+  margin: 8px 0px;
+}
+.menu__footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8em;
+}
+.menu__footer img {
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
 }
 
 .mask {
@@ -259,6 +312,11 @@ a {
   width: 0px;
 }
 
+#menu-note {
+  width: 90px;
+  height: 90px;
+}
+
 #note {
   width: 20%;
 }
@@ -279,6 +337,14 @@ a {
 
   .menu {
     width: 260px;
+  }
+  .menu__box {
+    margin: 20px 5px;
+  }
+  .menu__main {
+    max-width: 750px;
+    min-width: 80%;
+    padding: 5px;
   }
 
   .mask {
