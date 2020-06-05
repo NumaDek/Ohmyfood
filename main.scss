@@ -224,16 +224,40 @@ a {
         max-width: 750px;
         min-width: 90%;
         padding: 50px;
+        display: flex;
 
         h3 {
             font-family: $font-p-note;
             font-size: 1.2em;
             font-weight: bold;
 
+
             &:hover {
                 /* ! Animer ! */
                 text-decoration: underline;
             }
+        }
+    }
+
+    &--underline {
+        position: relative;
+
+        &:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 1px;
+            left: 0;
+            background-color: $font-c-aux-note;
+            visibility: hidden;
+            transform: scaleX(0);
+            transition: all 0.3s ease-in-out;
+        }
+
+        &:hover:before {
+            visibility: visible;
+            transform: scaleX(1);
         }
     }
 
@@ -247,10 +271,6 @@ a {
         img {
             width: 35%;
         }
-    }
-
-    &__price {
-        font-weight: bold;
     }
 
     &__content {
@@ -324,7 +344,7 @@ a {
     text-align: justify;
 }
 
-@media (max-width: 380px) {
+@media (max-width: 320px) {
     body {
         margin-bottom: 130px;
     }
@@ -340,6 +360,22 @@ a {
             max-width: 750px;
             min-width: 80%;
             padding: 5px;
+        }
+
+        &__head-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+
+            img {
+                width: 90%;
+            }
+
+            h3 {
+                margin: 0;
+            }
         }
     }
 
