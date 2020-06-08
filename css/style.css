@@ -93,6 +93,9 @@ a {
   height: 50px;
   bottom: 0;
 }
+.banner img {
+  max-width: 240px;
+}
 
 .footer-links {
   font-size: 1.1em;
@@ -112,358 +115,129 @@ a {
   margin: 30px 0px;
 }
 
-.menu {
+.shadow {
+  box-shadow: 0px 0px 12px #BBBBBB;
+}
+.shadow--mask {
+  overflow: hidden;
+  margin: 20px 20px;
+  max-width: 300px;
+  height: 424px;
+}
+
+.tile {
   width: 300px;
   height: 424px;
   flex-direction: column;
 }
-.menu:hover {
+.tile:hover {
   transition: 300ms;
   opacity: 0.4;
   transform: scale(1.1);
 }
-.menu__box {
-  color: black;
-  flex-direction: column;
+.tile img {
+  width: 20%;
 }
-.menu__note-enchantee {
+.tile__note-enchantee {
   background-color: #fcdfdb;
 }
-.menu__note-enchantee h2 {
+.tile__note-enchantee h2 {
   font-family: "Devonshire", cursive;
   font-size: 1.7em;
   font-weight: normal;
 }
-.menu__note-enchantee h2 {
+.tile__note-enchantee h2 {
   background: linear-gradient(to right, #3d1319 0%, #3d1319 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.menu__note-enchantee p {
+.tile__note-enchantee p {
   margin: 0;
   color: #3d1319;
 }
-.menu__note-enchantee p {
+.tile__note-enchantee p {
   font-family: "segoe-print-b", Comic Sans MS;
   font-size: 1.7em;
   font-weight: normal;
 }
-.menu__chic-francaise {
+.tile__chic-francaise {
   background-color: #fff5fe;
 }
-.menu__chic-francaise h2 {
+.tile__chic-francaise h2 {
   font-family: "Croissant One", cursive;
   font-size: 1.25em;
   font-weight: normal;
 }
-.menu__chic-francaise h2 {
+.tile__chic-francaise h2 {
   background: linear-gradient(to right, #eba54e 0%, #915dfe 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.menu__chic-francaise p {
+.tile__chic-francaise p {
   margin: 0;
   color: #c77412;
 }
-.menu__chic-francaise p {
+.tile__chic-francaise p {
   font-family: "Old Standard TT", serif;
   font-size: 1.7em;
   font-weight: normal;
 }
-.menu__delice-papilles {
+.tile__delice-papilles {
   background-color: #f9f9f9;
 }
-.menu__delice-papilles h2 {
+.tile__delice-papilles h2 {
   font-family: "Rusulica Script W00 Regular", cursive;
   font-size: 1.4em;
   font-weight: bold;
 }
-.menu__delice-papilles h2 {
+.tile__delice-papilles h2 {
   background: linear-gradient(to right, #0022db 0%, #08d9fb 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.menu__delice-papilles p {
+.tile__delice-papilles p {
   margin: 0;
   color: #0887fb;
 }
-.menu__delice-papilles p {
+.tile__delice-papilles p {
   font-family: "segoe-print", Comic Sans MS;
   font-size: 1.7em;
   font-weight: normal;
 }
-.menu__palette-gout {
+.tile__palette-gout {
   background-color: #fdfffd;
 }
-.menu__palette-gout h2 {
+.tile__palette-gout h2 {
   font-family: "Kaushan Script", cursive;
   font-size: 1.5em;
   font-weight: normal;
 }
-.menu__palette-gout h2 {
+.tile__palette-gout h2 {
   background: linear-gradient(to right, #41963c 0%, #beff7f 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.menu__palette-gout p {
+.tile__palette-gout p {
   margin: 0;
   color: #72bf56;
 }
-.menu__palette-gout p {
+.tile__palette-gout p {
   font-family: "segoe-print", Comic Sans MS;
   font-size: 1.7em;
   font-weight: normal;
 }
-.menu__main {
+
+.menu {
   display: flex;
   flex-direction: column;
-  box-shadow: 0px 0px 12px #BBBBBB;
   max-width: 750px;
   min-width: 90%;
   height: 900px;
   padding: 50px;
 }
-.menu__main__note-enchantee {
-  background-color: #fcdfdb;
-  font-family: "segoe-print-b", Comic Sans MS;
-  font-size: 1em;
-  font-weight: normal;
-  color: #3d1319;
-}
-.menu__main__note-enchantee h2 {
-  font-family: "Devonshire", cursive;
-  font-size: 3em;
-  font-weight: normal;
-}
-.menu__main__note-enchantee h2 {
-  background: linear-gradient(to right, #3d1319 0%, #3d1319 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.menu__main__note-enchantee p {
-  margin: 0;
-  color: #3d1319;
-}
-.menu__main__note-enchantee p {
-  font-family: "segoe-print-b", Comic Sans MS;
-  font-size: 0.9em;
-  font-weight: normal;
-}
-.menu__main__note-enchantee--underline {
-  position: relative;
-}
-.menu__main__note-enchantee--underline:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: 1px;
-  left: 0;
-  background-color: #3d1319;
-  visibility: hidden;
-  transform: scaleX(0);
-  transition: all 200ms ease-in-out;
-}
-.menu__main__note-enchantee--underline:hover:before {
-  visibility: visible;
-  transform: scaleX(1);
-}
-.menu__main__chic-francaise {
-  background-color: #fff5fe;
-}
-.menu__main__chic-francaise h2 {
-  font-family: "Croissant One", cursive;
-  font-size: 2.3em;
-  font-weight: normal;
-}
-.menu__main__chic-francaise h2 {
-  background: linear-gradient(to right, #eba54e 0%, #915dfe 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.menu__main__chic-francaise p {
-  margin: 0;
-  color: #c77412;
-}
-.menu__main__chic-francaise p {
-  font-family: "Old Standard TT", serif;
-  font-size: 0.9em;
-  font-weight: normal;
-}
-.menu__main__chic-francaise--one p {
-  margin: 8px;
-  color: #c77412;
-}
-.menu__main__chic-francaise--two p {
-  margin: 8px;
-  color: #a56799;
-}
-.menu__main__chic-francaise--three p {
-  margin: 8px;
-  color: #6e4ccc;
-}
-.menu__main__chic-francaise--underline--one {
-  font-family: "Old Standard TT", serif;
-  font-size: 1.2em;
-  font-weight: normal;
-  color: #c77412;
-  position: relative;
-}
-.menu__main__chic-francaise--underline--one:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: 1px;
-  left: 0;
-  background-color: #c77412;
-  visibility: hidden;
-  transform: scaleX(0);
-  transition: all 200ms ease-in-out;
-}
-.menu__main__chic-francaise--underline--one:hover:before {
-  visibility: visible;
-  transform: scaleX(1);
-}
-.menu__main__chic-francaise--underline--one p {
-  margin: 8px;
-  color: #c77412;
-}
-.menu__main__chic-francaise--underline--two {
-  font-family: "Old Standard TT", serif;
-  font-size: 1.2em;
-  font-weight: normal;
-  color: #a56799;
-  position: relative;
-}
-.menu__main__chic-francaise--underline--two:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: 1px;
-  left: 0;
-  background-color: #a56799;
-  visibility: hidden;
-  transform: scaleX(0);
-  transition: all 200ms ease-in-out;
-}
-.menu__main__chic-francaise--underline--two:hover:before {
-  visibility: visible;
-  transform: scaleX(1);
-}
-.menu__main__chic-francaise--underline--three {
-  font-family: "Old Standard TT", serif;
-  font-size: 1.2em;
-  font-weight: normal;
-  color: #6e4ccc;
-  position: relative;
-}
-.menu__main__chic-francaise--underline--three:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: 1px;
-  left: 0;
-  background-color: #6e4ccc;
-  visibility: hidden;
-  transform: scaleX(0);
-  transition: all 200ms ease-in-out;
-}
-.menu__main__chic-francaise--underline--three:hover:before {
-  visibility: visible;
-  transform: scaleX(1);
-}
-.menu__main__delice-papilles {
-  background-color: #edefef;
-  font-family: "segoe-print-b", Comic Sans MS;
-  font-size: 1em;
-  font-weight: normal;
+.menu__box {
   color: black;
-}
-.menu__main__delice-papilles h2 {
-  font-family: "Rusulica Script W00 Regular", cursive;
-  font-size: 3.2em;
-  font-weight: bold;
-}
-.menu__main__delice-papilles h2 {
-  background: linear-gradient(to right, #0022db 0%, #08d9fb 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.menu__main__delice-papilles p {
-  margin: 0;
-  color: black;
-}
-.menu__main__delice-papilles p {
-  font-family: "segoe-print-b", Comic Sans MS;
-  font-size: 0.9em;
-  font-weight: normal;
-}
-.menu__main__delice-papilles--underline {
-  position: relative;
-}
-.menu__main__delice-papilles--underline:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: 1px;
-  left: 0;
-  background-color: #0887fb;
-  visibility: hidden;
-  transform: scaleX(0);
-  transition: all 200ms ease-in-out;
-}
-.menu__main__delice-papilles--underline:hover:before {
-  visibility: visible;
-  transform: scaleX(1);
-}
-.menu__main__palette-gout {
-  background-color: #fdfffd;
-  font-family: "segoe-print-b", Comic Sans MS;
-  font-size: 1em;
-  font-weight: normal;
-  color: black;
-}
-.menu__main__palette-gout h2 {
-  font-family: "Kaushan Script", cursive;
-  font-size: 3.5em;
-  font-weight: normal;
-}
-.menu__main__palette-gout h2 {
-  background: linear-gradient(to right, #41963c 0%, #beff7f 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.menu__main__palette-gout p {
-  margin: 0;
-  color: black;
-}
-.menu__main__palette-gout p {
-  font-family: "segoe-print-b", Comic Sans MS;
-  font-size: 0.9em;
-  font-weight: normal;
-}
-.menu__main__palette-gout--underline {
-  position: relative;
-}
-.menu__main__palette-gout--underline:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: 1px;
-  left: 0;
-  background-color: #72bf56;
-  visibility: hidden;
-  transform: scaleX(0);
-  transition: all 200ms ease-in-out;
-}
-.menu__main__palette-gout--underline:hover:before {
-  visibility: visible;
-  transform: scaleX(1);
+  flex-direction: column;
 }
 .menu__title-box {
   height: 200px;
@@ -475,6 +249,10 @@ a {
 }
 .menu__title-box h2 {
   margin: 0;
+}
+.menu__title-box img {
+  width: 90px;
+  height: 90px;
 }
 .menu__head-box {
   display: flex;
@@ -517,13 +295,235 @@ a {
   height: 35px;
   margin-right: 10px;
 }
-
-.mask {
-  box-shadow: 0px 0px 12px #BBBBBB;
-  margin: 20px 20px;
-  overflow: hidden;
-  max-width: 300px;
-  height: 424px;
+.menu__note-enchantee {
+  background-color: #fcdfdb;
+  font-family: "segoe-print-b", Comic Sans MS;
+  font-size: 1em;
+  font-weight: normal;
+  color: #3d1319;
+}
+.menu__note-enchantee h2 {
+  font-family: "Devonshire", cursive;
+  font-size: 3em;
+  font-weight: normal;
+}
+.menu__note-enchantee h2 {
+  background: linear-gradient(to right, #3d1319 0%, #3d1319 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.menu__note-enchantee p {
+  margin: 0;
+  color: #3d1319;
+}
+.menu__note-enchantee p {
+  font-family: "segoe-print-b", Comic Sans MS;
+  font-size: 0.9em;
+  font-weight: normal;
+}
+.menu__note-enchantee--underline {
+  position: relative;
+}
+.menu__note-enchantee--underline:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 1px;
+  left: 0;
+  background-color: #3d1319;
+  transform: scaleX(0);
+  transition: all 200ms ease-in-out;
+}
+.menu__note-enchantee--underline:hover:before {
+  transform: scaleX(1);
+}
+.menu__chic-francaise {
+  background-color: #fff5fe;
+}
+.menu__chic-francaise h2 {
+  font-family: "Croissant One", cursive;
+  font-size: 2.3em;
+  font-weight: normal;
+}
+.menu__chic-francaise h2 {
+  background: linear-gradient(to right, #eba54e 0%, #915dfe 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.menu__chic-francaise p {
+  margin: 0;
+  color: #c77412;
+}
+.menu__chic-francaise p {
+  font-family: "Old Standard TT", serif;
+  font-size: 0.9em;
+  font-weight: normal;
+}
+.menu__chic-francaise--one p {
+  margin: 8px;
+  color: #c77412;
+}
+.menu__chic-francaise--two p {
+  margin: 8px;
+  color: #a56799;
+}
+.menu__chic-francaise--three p {
+  margin: 8px;
+  color: #6e4ccc;
+}
+.menu__chic-francaise--underline--one {
+  font-family: "Old Standard TT", serif;
+  font-size: 1.2em;
+  font-weight: normal;
+  color: #c77412;
+  position: relative;
+}
+.menu__chic-francaise--underline--one:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 1px;
+  left: 0;
+  background-color: #c77412;
+  transform: scaleX(0);
+  transition: all 200ms ease-in-out;
+}
+.menu__chic-francaise--underline--one:hover:before {
+  transform: scaleX(1);
+}
+.menu__chic-francaise--underline--one p {
+  margin: 8px;
+  color: #c77412;
+}
+.menu__chic-francaise--underline--two {
+  font-family: "Old Standard TT", serif;
+  font-size: 1.2em;
+  font-weight: normal;
+  color: #a56799;
+  position: relative;
+}
+.menu__chic-francaise--underline--two:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 1px;
+  left: 0;
+  background-color: #a56799;
+  transform: scaleX(0);
+  transition: all 200ms ease-in-out;
+}
+.menu__chic-francaise--underline--two:hover:before {
+  transform: scaleX(1);
+}
+.menu__chic-francaise--underline--three {
+  font-family: "Old Standard TT", serif;
+  font-size: 1.2em;
+  font-weight: normal;
+  color: #6e4ccc;
+  position: relative;
+}
+.menu__chic-francaise--underline--three:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 1px;
+  left: 0;
+  background-color: #6e4ccc;
+  transform: scaleX(0);
+  transition: all 200ms ease-in-out;
+}
+.menu__chic-francaise--underline--three:hover:before {
+  transform: scaleX(1);
+}
+.menu__delice-papilles {
+  background-color: #edefef;
+  font-family: "segoe-print-b", Comic Sans MS;
+  font-size: 1em;
+  font-weight: normal;
+  color: black;
+}
+.menu__delice-papilles h2 {
+  font-family: "Rusulica Script W00 Regular", cursive;
+  font-size: 3.2em;
+  font-weight: bold;
+}
+.menu__delice-papilles h2 {
+  background: linear-gradient(to right, #0022db 0%, #08d9fb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.menu__delice-papilles p {
+  margin: 0;
+  color: black;
+}
+.menu__delice-papilles p {
+  font-family: "segoe-print", Comic Sans MS;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+.menu__delice-papilles--underline {
+  position: relative;
+}
+.menu__delice-papilles--underline:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 1px;
+  left: 0;
+  background-color: #0887fb;
+  transform: scaleX(0);
+  transition: all 200ms ease-in-out;
+}
+.menu__delice-papilles--underline:hover:before {
+  transform: scaleX(1);
+}
+.menu__palette-gout {
+  background-color: #fdfffd;
+  font-family: "segoe-print-b", Comic Sans MS;
+  font-size: 1em;
+  font-weight: normal;
+  color: black;
+}
+.menu__palette-gout h2 {
+  font-family: "Kaushan Script", cursive;
+  font-size: 3.5em;
+  font-weight: normal;
+}
+.menu__palette-gout h2 {
+  background: linear-gradient(to right, #41963c 0%, #beff7f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.menu__palette-gout p {
+  margin: 0;
+  color: black;
+}
+.menu__palette-gout p {
+  font-family: "segoe-print", Comic Sans MS;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+.menu__palette-gout--underline {
+  position: relative;
+}
+.menu__palette-gout--underline:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 1px;
+  left: 0;
+  background-color: #72bf56;
+  transform: scaleX(0);
+  transition: all 200ms ease-in-out;
+}
+.menu__palette-gout--underline:hover:before {
+  transform: scaleX(1);
 }
 
 .soon {
@@ -532,7 +532,7 @@ a {
   font-size: 1.6em;
   height: 50px;
   width: 300px;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
 }
 .soon__text:after {
   position: absolute;
@@ -544,46 +544,46 @@ a {
   width: 0px;
 }
 
-#menu-note {
-  width: 90px;
-  height: 90px;
-}
-
-#note {
-  width: 20%;
-}
-
-#logo {
-  max-width: 240px;
-}
-
-#legal {
+.legal {
   color: black;
+}
+.legal h1 {
+  text-align: center;
+}
+.legal p {
   text-align: justify;
 }
 
+@media (max-width: 768px) {
+  .menu {
+    width: 95%;
+    height: 100%;
+    padding: 5px;
+  }
+}
 @media (max-width: 425px) {
-  body {
-    margin-bottom: 130px;
+  .tile {
+    width: 300px;
   }
 
   .menu {
-    width: 260px;
+    padding: 5px;
+    height: 100%;
   }
   .menu__box {
     margin: 20px 5px;
   }
-  .menu__main {
-    max-width: 750px;
-    min-width: 80%;
-    padding: 5px;
-    height: 100%;
+  .menu__title-box h2 {
+    font-size: 1.7em;
+  }
+  .menu__title-box--note {
+    font-size: 1.7em;
+  }
+  .menu__title-box--chic {
+    font-size: 0.8em;
   }
   .menu__head-box {
-    display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: center;
     width: 100%;
   }
@@ -591,11 +591,7 @@ a {
     width: 90%;
   }
   .menu__head-box h3 {
-    margin: 0;
-  }
-
-  .mask {
-    height: 367px;
+    margin: 2px;
   }
 
   .banner--footer {
