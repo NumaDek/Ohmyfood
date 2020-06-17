@@ -22,16 +22,16 @@
 $main-color: #579c87;
 $font-color: #fdcb46;
 // Default font.
-$font: Arial, sans serif;
+$font: Arial, 'sans serif';
 // Main menu fonts.
 $font-note: 'Devonshire', cursive;
 $font-chic: 'Croissant One', cursive;
 $font-delice: 'Rusulica Script W00 Regular', cursive;
 $font-palette: 'Kaushan Script', cursive;
 // Auxiliary menu fonts.
-$font-p-note-b: 'segoe-print-b', Comic Sans MS;
+$font-p-note-b: 'segoe-print-b', 'Comic Sans MS';
 $font-p-chic: 'Old Standard TT', serif;
-$font-p-note: 'segoe-print', Comic Sans MS;
+$font-p-note: 'segoe-print', 'Comic Sans MS';
 // Start color of the gradients in menu titles.
 $font-c-grad-start-note: #3d1319;
 $font-c-grad-start-chic: #eba54e;
@@ -139,7 +139,6 @@ $font-size-note-main : 2.5em;
         width: 100%;
         height: 2px;
         bottom: 1px;
-        left: 0;
         background-color: $font-color;
         transform: scaleX(0);
         transition: all 200ms ease-in-out;
@@ -216,6 +215,10 @@ a {
 .mosaique {
     max-width: 750px;
     margin: 30px 0px;
+
+    &--legal {
+        padding: 15px;
+    }
 }
 
 .shadow {
